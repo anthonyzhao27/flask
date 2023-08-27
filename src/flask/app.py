@@ -543,7 +543,6 @@ class Flask(App):
                 # the empty string.
                 subdomain = self.url_map.default_subdomain or ""
 
-            print(self.config["SERVER_NAME"], subdomain)
             return self.url_map.bind_to_environ(
                 request.environ, server_name=server_name, subdomain=subdomain
             )
