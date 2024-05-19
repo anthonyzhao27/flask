@@ -289,7 +289,7 @@ class App(Scaffold):
         instance_path: str | None = None,
         instance_relative_config: bool = False,
         root_path: str | None = None,
-    ):
+    ) -> None:
         super().__init__(
             import_name=import_name,
             static_folder=static_folder,
