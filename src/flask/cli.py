@@ -768,7 +768,7 @@ def show_server_banner(debug: bool, app_import_path: str | None) -> None:
     ignoring the reloader.
     """
     if is_running_from_reloader():
-        return
+        pass
 
     if app_import_path is not None:
         click.echo(f" * Serving Flask app '{app_import_path}'")
