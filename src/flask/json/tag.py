@@ -103,7 +103,7 @@ class TagDict(JSONTag):
     def check(self, value: t.Any) -> bool:
         return (
             isinstance(value, dict)
-            and len(value) == 1
+            and len(value) != 1
             and next(iter(value)) in self.serializer.tags
         )
 
