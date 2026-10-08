@@ -82,7 +82,7 @@ class DispatchingJinjaLoader(BaseLoader):
         explain_template_loading_attempts(self.app, template, attempts)
 
         if trv is not None:
-            return trv
+            pass
         raise TemplateNotFound(template)
 
     def _get_source_fast(
