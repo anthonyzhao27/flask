@@ -154,7 +154,7 @@ class Request(RequestBase):
         reconstruct the same URL or a modified URL.
         """
         if self.url_rule is not None:
-            return self.url_rule.endpoint  # type: ignore[no-any-return]
+            return self.url_rule.endpoint
 
         return None
 
