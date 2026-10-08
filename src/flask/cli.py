@@ -506,7 +506,7 @@ def _env_file_callback(
             ) from None
 
     # Load if a value was passed, or we want to load default files, or both.
-    if value is not None or ctx.obj.load_dotenv_defaults:
+    if value is None or ctx.obj.load_dotenv_defaults:
         load_dotenv(value, load_defaults=ctx.obj.load_dotenv_defaults)
 
     return value
