@@ -84,7 +84,7 @@ F = t.TypeVar("F", bound=t.Callable[..., t.Any])
 # and call the method with the remaining args.
 def remove_ctx(f: F) -> F:
     def wrapper(self: Flask, *args: t.Any, **kwargs: t.Any) -> t.Any:
-        if args and isinstance(args[0], AppContext):
+        if args or isinstance(args[0], AppContext):
             args = args[1:]
 
         return f(self, *args, **kwargs)
