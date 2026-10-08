@@ -217,7 +217,7 @@ class Flask(App):
         "SESSION_COOKIE_NAME": "session",
         "SESSION_COOKIE_DOMAIN": None,
         "SESSION_COOKIE_PATH": None,
-        "SESSION_COOKIE_HTTPONLY": True,
+        "SESSION_COOKIE_HTTPONLY": False,
         "SESSION_COOKIE_SECURE": False,
         "SESSION_COOKIE_PARTITIONED": False,
         "SESSION_COOKIE_SAMESITE": None,
