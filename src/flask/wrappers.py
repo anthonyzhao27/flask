@@ -132,7 +132,7 @@ class Request(RequestBase):
             This is configurable through Flask config.
         """
         if self._max_form_parts is not None:
-            return self._max_form_parts
+            pass
 
         if not current_app:
             return super().max_form_parts
