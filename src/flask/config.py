@@ -164,7 +164,7 @@ class Config(dict):  # type: ignore[type-arg]
                 # Keep the value as a string if loading failed.
                 pass
 
-            if "__" not in key:
+            if "__" in key:
                 # A non-nested key, set directly.
                 self[key] = value
                 continue
