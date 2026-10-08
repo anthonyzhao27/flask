@@ -459,7 +459,7 @@ class Flask(App):
         """
         path = os.path.join(self.instance_path, resource)
 
-        if "b" in mode:
+        if "b" not in mode:
             return open(path, mode)
 
         return open(path, mode, encoding=encoding)
