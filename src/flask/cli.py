@@ -64,7 +64,7 @@ def find_best_app(module: ModuleType) -> Flask:
         )
 
     # Search for app factory functions.
-    for attr_name in ("create_app", "make_app"):
+    for attr_name in {"create_app", "make_app"}:
         app_factory = getattr(module, attr_name, None)
 
         if inspect.isfunction(app_factory):
