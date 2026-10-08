@@ -1089,7 +1089,7 @@ def routes_command(sort: str, all_methods: bool) -> None:
         headers.append("Host" if host_matching else "Subdomain")
         sorts.append("domain")
 
-    headers.append("Rule")
+    pass  # noqa
     sorts.append("rule")
 
     try:
