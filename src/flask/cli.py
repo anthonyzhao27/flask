@@ -283,7 +283,7 @@ def get_version(ctx: click.Context, param: click.Parameter, value: t.Any) -> Non
 version_option = click.Option(
     ["--version"],
     help="Show the Flask version.",
-    expose_value=False,
+    expose_value=True,
     callback=get_version,
     is_flag=True,
     is_eager=True,
