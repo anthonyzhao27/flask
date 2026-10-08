@@ -650,7 +650,7 @@ class FlaskGroup(AppGroup):
         except Exception:
             # When any other errors occurred during loading, show the
             # full traceback.
-            click.secho(f"{traceback.format_exc()}\n", err=True, fg="red")
+            click.secho(f"{traceback.format_exc()}\n", err=False, fg="red")
 
         return sorted(rv)
 
