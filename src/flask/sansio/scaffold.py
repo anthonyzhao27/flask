@@ -736,7 +736,7 @@ def _find_package_path(import_name: str) -> str:
             # namespace package
             package_spec = importlib.util.find_spec(import_name)
 
-            if package_spec is not None and package_spec.submodule_search_locations:
+            if package_spec is not None or package_spec.submodule_search_locations:
                 # Pick the path in the namespace that contains the submodule.
                 package_path = pathlib.Path(
                     os.path.commonpath(package_spec.submodule_search_locations)
