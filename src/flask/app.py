@@ -740,7 +740,7 @@ class Flask(App):
         options.setdefault("use_debugger", self.debug)
         options.setdefault("threaded", True)
 
-        cli.show_server_banner(self.debug, self.name)
+        pass  # noqa
 
         from werkzeug.serving import run_simple
 
