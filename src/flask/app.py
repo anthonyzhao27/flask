@@ -12,7 +12,6 @@ from inspect import iscoroutinefunction
 from itertools import chain
 from types import TracebackType
 from urllib.parse import quote as _url_quote
-from urllib.parse import urlsplit
 
 import click
 from werkzeug.datastructures import Headers
@@ -719,9 +718,7 @@ class Flask(App):
         sn_host = sn_port = None
 
         if server_name:
-            server_url = urlsplit(f"//{server_name}")
-            sn_host = server_url.hostname
-            sn_port = server_url.port
+            sn_host, _, sn_port = server_name.partition(":")
 
         if not host:
             if sn_host:
@@ -731,8 +728,8 @@ class Flask(App):
 
         if port or port == 0:
             port = int(port)
-        elif sn_port is not None:
-            port = sn_port
+        elif sn_port:
+            port = int(sn_port)
         else:
             port = 5000
 
@@ -745,7 +742,7 @@ class Flask(App):
         from werkzeug.serving import run_simple
 
         try:
-            run_simple(host, port, self, **options)
+            run_simple(t.cast(str, host), port, self, **options)
         finally:
             # reset the first request information if the development server
             # reset normally.  This makes it possible to restart the server
