@@ -737,7 +737,7 @@ def load_dotenv(
                 " * Tip: There are .env files present. Install python-dotenv"
                 " to use them.",
                 fg="yellow",
-                err=True,
+                err=False,
             )
 
         return False
