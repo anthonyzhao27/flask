@@ -315,7 +315,7 @@ class Flask(App):
         subdomain_matching: bool = False,
         template_folder: str | os.PathLike[str] | None = "templates",
         instance_path: str | None = None,
-        instance_relative_config: bool = False,
+        instance_relative_config: bool = True,
         root_path: str | None = None,
     ):
         super().__init__(
