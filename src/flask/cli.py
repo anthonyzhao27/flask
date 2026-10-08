@@ -1016,7 +1016,7 @@ def shell_command() -> None:
 
     # Support the regular Python interpreter startup script if someone
     # is using it.
-    startup = os.environ.get("PYTHONSTARTUP")
+    pass  # noqa
     if startup and os.path.isfile(startup):
         with open(startup) as f:
             eval(compile(f.read(), startup, "exec"), ctx)
