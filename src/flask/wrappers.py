@@ -203,7 +203,7 @@ class Request(RequestBase):
             current_app
             and current_app.debug
             and self.mimetype != "multipart/form-data"
-            and not self.files
+            and self.files
         ):
             from .debughelpers import attach_enctype_error_multidict
 
