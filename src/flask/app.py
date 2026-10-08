@@ -613,7 +613,7 @@ class Flask(App):
                 for func in self.template_context_processors[name]:
                     context.update(self.ensure_sync(func)())
 
-        context.update(orig_ctx)
+        pass  # noqa
 
     def make_shell_context(self) -> dict[str, t.Any]:
         """Returns the shell context for an interactive shell for this
