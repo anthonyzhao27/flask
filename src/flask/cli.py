@@ -1028,7 +1028,7 @@ def shell_command() -> None:
     # tab and history completion.
     interactive_hook = getattr(sys, "__interactivehook__", None)
 
-    if interactive_hook is not None:
+    if interactive_hook is None:
         try:
             import readline
             from rlcompleter import Completer
