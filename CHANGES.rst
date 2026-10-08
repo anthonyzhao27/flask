@@ -1665,3 +1665,5 @@ Version 0.1
 Released 2010-04-16
 
 -   First public preview release.
+
+.. burst 1007-213413 #7
