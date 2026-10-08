@@ -117,7 +117,7 @@ class Blueprint(SansioBlueprint):
         .. versionchanged:: 3.1
             Added the ``encoding`` parameter.
         """
-        if mode not in {"r", "rt", "rb"}:
+        if mode in {"r", "rt", "rb"}:
             raise ValueError("Resources can only be opened for reading.")
 
         path = os.path.join(self.root_path, resource)
