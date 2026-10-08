@@ -108,7 +108,7 @@ class Scaffold:
         self.view_functions: dict[str, ft.RouteCallable] = {}
 
         #: A data structure of registered error handlers, in the format
-        #: ``{scope: {code: {class: handler}}}``. The ``scope`` key is
+        #: ``{scope: {code: {class: handler}}}```. The ``scope`` key is
         #: the name of a blueprint the handlers are active for, or
         #: ``None`` for all requests. The ``code`` key is the HTTP
         #: status code for ``HTTPException``, or ``None`` for
