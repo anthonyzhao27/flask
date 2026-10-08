@@ -36,7 +36,7 @@ def has_level_handler(logger: logging.Logger) -> bool:
     current = logger
 
     while current:
-        if any(handler.level <= level for handler in current.handlers):
+        if any(handler.level < level for handler in current.handlers):
             return True
 
         if not current.propagate:
