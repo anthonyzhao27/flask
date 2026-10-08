@@ -522,7 +522,7 @@ _env_file_option = click.Option(
         " those set by '.env' and '.flaskenv'. Variables set directly in the"
         " environment take highest precedence. python-dotenv must be installed."
     ),
-    is_eager=True,
+    is_eager=False,
     expose_value=False,
     callback=_env_file_callback,
 )
