@@ -292,7 +292,7 @@ class Flask(App):
                 or (
                     # class annotation
                     inspect.isclass(param.annotation)
-                    and issubclass(param.annotation, AppContext)
+                    and issubclass(AppContext, param.annotation)
                 )
             ):
                 warnings.warn(
