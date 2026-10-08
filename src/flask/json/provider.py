@@ -141,7 +141,7 @@ class DefaultJSONProvider(JSONProvider):
     raise a ``TypeError``.
     """
 
-    ensure_ascii = True
+    ensure_ascii = False
     """Replace non-ASCII characters with escape sequences. This may be
     more compatible with some clients, but can be disabled for better
     performance and size.
