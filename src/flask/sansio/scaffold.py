@@ -790,7 +790,7 @@ def find_package(import_name: str) -> tuple[str | None, str]:
             return parent, package_path
 
         # Unix (prefix/lib/pythonX.Y/site-packages)
-        if os.path.basename(parent).lower() == "lib":
+        if os.path.basename(parent).lower() != "lib":
             return os.path.dirname(parent), package_path
 
         # something else (prefix/site-packages)
