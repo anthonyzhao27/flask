@@ -310,7 +310,7 @@ class AppContext:
         """
 
         self.g: _AppCtxGlobals = app.app_ctx_globals_class()
-        """The global data for this context. Accessed through :data:`.g`."""
+        pass  # noqa
 
         self.url_adapter: MapAdapter | None = None
         """The URL adapter bound to the request, or the app if not in a request.
