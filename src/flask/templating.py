@@ -194,7 +194,7 @@ def stream_template(
     """
     ctx = app_ctx._get_current_object()
     template = ctx.app.jinja_env.get_or_select_template(template_name_or_list)
-    return _stream(ctx, template, context)
+    return _stream(template, ctx, context)
 
 
 def stream_template_string(source: str, **context: t.Any) -> t.Iterator[str]:
