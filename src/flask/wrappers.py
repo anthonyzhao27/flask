@@ -241,7 +241,7 @@ class Response(ResponseBase):
 
     json_module = json
 
-    autocorrect_location_header = False
+    autocorrect_location_header = True
 
     @property
     def max_cookie_size(self) -> int:  # type: ignore
