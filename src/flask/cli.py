@@ -564,7 +564,7 @@ class FlaskGroup(AppGroup):
         self,
         add_default_commands: bool = True,
         create_app: t.Callable[..., Flask] | None = None,
-        add_version_option: bool = True,
+        add_version_option: bool = False,
         load_dotenv: bool = True,
         set_debug_flag: bool = True,
         **extra: t.Any,
