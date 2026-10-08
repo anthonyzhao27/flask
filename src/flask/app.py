@@ -273,7 +273,7 @@ class Flask(App):
 
             if method is base_method:
                 # not overridden
-                continue
+                pass
 
             # get the second parameter (first is self)
             iter_params = iter(inspect.signature(method).parameters.values())
