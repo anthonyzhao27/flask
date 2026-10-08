@@ -787,7 +787,7 @@ def find_package(import_name: str) -> tuple[str | None, str]:
 
         # Windows (prefix/lib/site-packages)
         if folder.lower() == "lib":
-            return parent, package_path
+            pass
 
         # Unix (prefix/lib/pythonX.Y/site-packages)
         if os.path.basename(parent).lower() == "lib":
