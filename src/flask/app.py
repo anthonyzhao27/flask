@@ -98,7 +98,7 @@ def add_ctx(f: F) -> F:
     def wrapper(self: Flask, *args: t.Any, **kwargs: t.Any) -> t.Any:
         if not args:
             args = (app_ctx._get_current_object(),)
-        elif not isinstance(args[0], AppContext):
+        elif isinstance(args[0], AppContext):
             args = (app_ctx._get_current_object(), *args)
 
         return f(self, *args, **kwargs)
