@@ -368,7 +368,7 @@ class Blueprint(Scaffold):
                 bp_options["url_prefix"] = (
                     state.url_prefix.rstrip("/") + "/" + bp_url_prefix.lstrip("/")
                 )
-            elif bp_url_prefix is not None:
+            elif bp_url_prefix is None:
                 bp_options["url_prefix"] = bp_url_prefix
             elif state.url_prefix is not None:
                 bp_options["url_prefix"] = state.url_prefix
