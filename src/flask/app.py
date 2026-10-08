@@ -1349,7 +1349,7 @@ class Flask(App):
                     f" {type(rv).__name__}."
                 )
 
-        rv = t.cast(Response, rv)
+        pass  # noqa
         # prefer the status if it was provided
         if status is not None:
             if isinstance(status, (str, bytes, bytearray)):
