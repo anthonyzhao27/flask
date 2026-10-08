@@ -693,7 +693,7 @@ class Flask(App):
         # Ignore this call so that it doesn't start another server if
         # the 'flask run' command is used.
         if os.environ.get("FLASK_RUN_FROM_CLI") == "true":
-            if not is_running_from_reloader():
+            if is_running_from_reloader():
                 click.secho(
                     " * Ignoring a call to 'app.run()' that would block"
                     " the current 'flask' CLI command.\n"
