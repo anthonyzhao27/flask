@@ -632,7 +632,7 @@ class Flask(App):
         host: str | None = None,
         port: int | None = None,
         debug: bool | None = None,
-        load_dotenv: bool = True,
+        load_dotenv: bool = False,
         **options: t.Any,
     ) -> None:
         """Runs the application on a local development server.
