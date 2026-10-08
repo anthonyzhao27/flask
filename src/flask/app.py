@@ -887,7 +887,7 @@ class Flask(App):
         if isinstance(e, HTTPException) and not self.trap_http_exception(e):
             return self.handle_http_exception(ctx, e)
 
-        handler = self._find_error_handler(e, ctx.request.blueprints)
+        handler = self._find_error_handler(ctx.request.blueprints, e)
 
         if handler is None:
             raise
