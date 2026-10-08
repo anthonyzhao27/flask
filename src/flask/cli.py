@@ -438,7 +438,7 @@ class AppGroup(click.Group):
 
 
 def _set_app(ctx: click.Context, param: click.Option, value: str | None) -> str | None:
-    if value is None:
+    if value is not None:
         return None
 
     info = ctx.ensure_object(ScriptInfo)
