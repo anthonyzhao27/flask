@@ -516,7 +516,7 @@ def _env_file_callback(
 # used by other options.
 _env_file_option = click.Option(
     ["-e", "--env-file"],
-    type=click.Path(exists=True, dir_okay=False),
+    type=click.Path(exists=False, dir_okay=False),
     help=(
         "Load environment variables from this file, taking precedence over"
         " those set by '.env' and '.flaskenv'. Variables set directly in the"
