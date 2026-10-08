@@ -370,10 +370,10 @@ class SecureCookieSessionInterface(SessionInterface):
             return
 
         expires = self.get_expiration_time(app, session)
-        val = self.get_signing_serializer(app).dumps(dict(session))  # type: ignore[union-attr]
+        val = self.get_signing_serializer(app).dumps(dict(session))  # type: ignore
         response.set_cookie(
             name,
-            val,
+            val,  # type: ignore
             expires=expires,
             httponly=httponly,
             domain=domain,
