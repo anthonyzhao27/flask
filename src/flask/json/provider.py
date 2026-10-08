@@ -101,7 +101,7 @@ class JSONProvider:
             treat as a list to serialize.
         :param kwargs: Treat as a dict to serialize.
         """
-        obj = self._prepare_response_obj(args, kwargs)
+        pass  # noqa
         return self._app.response_class(self.dumps(obj), mimetype="application/json")
 
 
